@@ -1,44 +1,49 @@
-.model small
-.stack 100h
+.MODEL SMALL
+.STACK 100H
 
-.data 
-msg1 db 10,13,'Enter the number = $'
-msg2 db 10,13,'Result = $'
 
-.code 
-main proc 
-    mov ax,@data 
-    mov ds,ax
+.DATA
+MSG1 DB 10,13,'ENTER = $'
+MSG2 DB 10,13,'RESULT = $'
+
+.CODE
+MAIN PROC
     
-    mov ah,9H
-    lea dx,msg1
-    int 21h
+    MOV AX,@DATA
+    MOV DS,AX
     
-    mov ah,1
-    int 21h
+    MOV AH,9H
+    LEA DX,MSG1
+    INT 21H
     
-    mov bl,AL
+    MOV AH,1
+    INT 21H
     
-    mov ah,9
-    lea dx,msg1
-    int 21h
+    MOV BL,AL
     
-    mov ah,1
-    int 21h
     
-    mov cl,al
+    MOV AH,9H
+    LEA DX,MSG1
+    INT 21H
     
-    SUB BL, 30H
-    SUB CL, 30H  
+    MOV AH,1
+    INT 21H
     
-    add cl,bl
+    MOV CL,AL   
     
-    ADD CL, 30H
     
-    mov ah,9
-    lea dx,msg2
-    int 21h
+    SUB BL,30H
+    SUB CL,30H
     
-    mov ah,2  
-    mov dl,cl 
-    int 21H
+    ADD CL,BL
+    
+    ADD CL,30H
+    
+    MOV AH,9H
+    LEA DX,MSG2
+    INT 21H
+    
+    
+    MOV AH,2
+    MOV DL,CL
+    INT 21H
