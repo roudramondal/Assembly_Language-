@@ -18,7 +18,7 @@ MAIN PROC
     LEA DX, MSG1
     INT 21H
     
-    MOV AH, 1
+    MOV AH, 1; value input 
     INT 21H
     
     SUB AL, 30H
