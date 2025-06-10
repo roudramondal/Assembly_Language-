@@ -5,7 +5,7 @@ INCLUDE 'EMU8086.INC'
 .CODE
 MAIN PROC           
     PRINT 'ENTER THE FIRST NUMBER='
-    MOV AH,01H
+    MOV AH,01H ; value insert 
     INT 21H
     MOV BL,AL
     MOV DL,10
