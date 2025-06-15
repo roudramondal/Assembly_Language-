@@ -15,7 +15,7 @@ MAIN PROC
     MOV AH,02H
     INT 21H
     
-     PRINT 'ENTER THE SECOND NUMBER='
+     PRINT 'ENTER THE SECOND NUMBER=' ; enter the second value
      MOV AH,01H
      INT 21H
      MOV CL,AL
