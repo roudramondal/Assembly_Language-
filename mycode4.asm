@@ -1,6 +1,6 @@
+;Roudra Mondal
 .MODEL SMALL
 .STACK 100H
-
 
 .DATA
 MSG1 DB 10,13,'ENTER = $'
