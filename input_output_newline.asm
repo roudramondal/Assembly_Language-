@@ -3,9 +3,9 @@
 
 .DATA 
 MSG1 DB "ENTER NUMBER1= $"
-MSG2 DB "ENTER NUMBER2= $"
-MSG3 DB "VALUE1= $"
-MSG4 DB "VALUE2= $"
+MSG2 DB 10,13, 'ENTER NUMBER2= $'
+MSG3 DB 10,13, 'VALUE1= $'
+MSG4 DB 10,13, 'VALUE2= $'
 
 .CODE
 MAIN PROC
@@ -37,13 +37,13 @@ MAIN PROC
     MOV DL,BL
     INT 21H   
     
-    MOV AH,2H
-    MOV DL,0DH 
-    INT 21H
+    ;MOV AH,2H
+   ; MOV DL,0DH 
+    ;INT 21H
     
-    MOV AH,2H
-    MOV DL,0AH
-    INT 21H
+    ;MOV AH,2H
+    ;MOV DL,0AH
+    ;INT 21H
     
     MOV AH,9H
     LEA DX,MSG2
